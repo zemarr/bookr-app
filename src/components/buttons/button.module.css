@@ -1,0 +1,170 @@
+button {
+    margin: 0 15px;
+    outline: none;
+}
+
+.signin {
+    color: #078f68;
+    font-weight: 500;
+    font-size: 13.6px;
+    letter-spacing: -0.4px;
+    background-color: transparent;
+    border: solid 2px #078f68;
+    padding: 0;
+    width: 100px;
+    height: 35px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.signup {
+    color: white;
+    font-weight: 500;
+    font-size: 13.6px;
+    letter-spacing: -0.4px;
+    background-color: #078f68;
+    border: solid 2px #078f68;
+    padding: 0;
+    width: 100px;
+    height: 35px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.bookroom {
+    background-color: transparent;
+    margin: 2em 0 0 0;
+    padding: 0;
+    width: 180px;
+    height: 50px;
+    border-radius: 3px;
+    border: solid 2px #078f68;
+    color: #078f68;
+    font-size: 20px;
+    font-weight: 500;
+    transition: ease-in-out .25s;
+    -webkit-transition: ease-in-out .25s;
+    -moz-transition: ease-in-out .25s;
+    -ms-transition: ease-in-out .25s;
+    -o-transition: ease-in-out .25s;
+}
+
+.bookroom:hover {
+    font-weight: 500;
+    color: #078f68;
+    background-color: white;
+    border: solid 2px transparent;
+}
+
+.learnmorebtn {
+    margin: 0;
+    margin-top: 3rem;
+    height: 50px;
+    width: 300px;
+    background-color: transparent;
+    color:#078f68;
+    font-size: 1.1rem;
+    border: solid 2px #078f68;
+    border-radius: 4px;
+    transition: ease-in-out .1s;
+    -webkit-transition: ease-in-out .1s;
+    -moz-transition: ease-in-out .1s;
+    -ms-transition: ease-in-out .1s;
+    -o-transition: ease-in-out .1s;
+}
+
+.learnmorebtn:hover {
+    font-weight: 500;
+    color: white;
+    background-color: #078f68;
+}
+
+.viewmore {
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    height: 55px;
+    width: 260px;
+    background-color: transparent;
+    color: #078f68;
+    font-size: 1.1rem;
+    border: solid 2px #078f68;
+    border-radius: 4px;
+    transition: ease-in-out .1s;
+    -webkit-transition: ease-in-out .1s;
+    -moz-transition: ease-in-out .1s;
+    -ms-transition: ease-in-out .1s;
+    -o-transition: ease-in-out .1s;
+}
+
+.viewmore:hover {
+    font-weight: 500;
+    color: white;
+    background-color: #078f68;
+}
+
+
+.viewdetails {
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    height: 35px;
+    width: 150px;
+    background-color: white;
+    color: #078f68;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    position: absolute;
+    top: 115px;
+    left: 22px;
+    transition: ease-in-out .25s;
+    -webkit-transition: ease-in-out .25s;
+    -moz-transition: ease-in-out .25s;
+    -ms-transition: ease-in-out .25s;
+    -o-transition: ease-in-out .25s;
+}
+
+.viewdetails:hover {
+    font-size: 1.05rem;
+    background-color: #078f68;
+    color: white;
+}
+
+.contact {
+    margin: 1rem 5.5rem;
+    height: 50px;
+    width: 130px;
+    background-color: transparent;
+    color: #078f68;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: solid 2px #078f68;
+    border-radius: 4px;
+    transition: ease-in-out .25s;
+    -webkit-transition: ease-in-out .25s;
+    -moz-transition: ease-in-out .25s;
+    -ms-transition: ease-in-out .25s;
+    -o-transition: ease-in-out .25s;
+}
+
+.subscribe {
+    background-color: white;
+    color: #078f68;
+    height: 35px;
+    width: 43px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
