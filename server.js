@@ -8,12 +8,8 @@ const app = express();
 //body parser middleware
 app.use(bodyParser.json());
 
-const rooms = []
-app.get("/room_details",(req, res) => {
-    res.status(200).send(rooms)
-})
-
-
+const routes = require('./server/routes/roomRoutes')
+routes(app)
 
 //DB config
 const db = require('./server/config/keys').mongoURI;
