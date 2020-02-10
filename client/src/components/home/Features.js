@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
 import feat from './home.module.css';
 import { Heading } from './Conferencerooms';
+import { FaApple } from 'react-icons/fa';
+
 
 const Features = () => {
     return (
@@ -24,9 +26,14 @@ const Features = () => {
 }
 
 const Feature = (props) => {
+    const featureStyle = {
+        width: '200px',
+        margin: '0 0 2rem 0'
+    }
+
     return (
         <Fragment>
-            <div style={{ width: '350px' }}>
+            <div style={featureStyle}>
                 <Doodle />
                 <Details
                     name={props.name}
@@ -37,10 +44,10 @@ const Feature = (props) => {
     )
 }
 
-const Doodle = () => {
+const Doodle = (props) => {
     return (
         <Fragment>
-            <div className={feat.doodleimg}></div>
+            <span><FaApple /></span>
         </Fragment>
     )
 }

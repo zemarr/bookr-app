@@ -1,24 +1,18 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Navbar from '../home/Navbar';
-import Hero from '../home/Hero';
-import Conferencerooms from '../home/Conferencerooms';
-import Features from '../home/Features';
-import Support from '../home/Support';
-import Footer from '../home/Footer';
+import MeetingRooms from '../home/Meetingrooms';
+import Home from '../home/Home';
 
 const Routes = () => {
     return (
         <Fragment>
             <Router>
-                <div>
-                    <Navbar />
-                    <Hero />
-                    <Conferencerooms />
-                    <Features />
-                    <Support />
-                    <Footer />
-                </div>
+                <Switch>
+                    <div>
+                        <Route path='/' exact component={Home} />
+                        <Route path='/meetingrooms' component={MeetingRooms} />
+                    </div>
+                </Switch>
             </Router>
 
         </Fragment>

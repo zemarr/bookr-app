@@ -1,11 +1,15 @@
 import React from 'react';
 import btn from './button.module.css';
+import { Link } from 'react-router-dom';
 
 const Button = (props) => {
     return (
-    <button type={props.type} className={btn[props.className]}>
-        {props.name}
-    </button>
+        <Link to={props.link}>
+            <button type={props.type} className={btn[props.className]}>
+                {props.name}
+            </button>
+        </Link>
+
     )
 }
 

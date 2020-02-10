@@ -1,16 +1,21 @@
 import React, { Fragment } from 'react';
 import Button from '../buttons/Buttons';
 import hm from './home.module.css';
-import Searchicon from '../../assets/img/search.svg';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
         <Fragment>
             <nav className={hm.nav}>
-                <h4>Book R</h4>
-                <p>Plan a meeting</p>
-                <p>Meeting rooms</p>
-                <p>Check Availability</p>
+                <Link to='/'>
+                    <h4>Book R</h4>
+                </Link>
+                <Link to='/meetingrooms'>
+                    <p>Meeting rooms</p>
+                </Link>
+                <Link to='/checkavailability'>
+                    <p>Check Availability</p>
+                </Link>
                 <div className={hm.navutils}>
                     <Button
                         name='Sign in'
@@ -20,21 +25,9 @@ const Navbar = () => {
                         name='Register'
                         className='signup'
                     />
-                    <Search />
                 </div>
             </nav>
         </Fragment>
-    )
-}
-
-const Search = () => {
-    return (
-        <Fragment>
-            <div className={hm.searchicon}>
-                <img src={Searchicon} alt='search' style={{width: '100%', height: '100%'}}></img>
-            </div>
-        </Fragment>
-
     )
 }
 
