@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import cfr from './home.module.css';
 import Button from '../buttons/Buttons';
-// import axios from 'axios';
+import axios from 'axios';
 
 
 const Conferencerooms = () => {
@@ -54,9 +54,16 @@ const Info = (props) => {
 
 const Roomthumbnails = () => {
 
-    const getRooms =  () => {
-       console.log('clicked')
+    const getRooms =   () => {
+       axios ({
+           method: 'get',
+           url: 'http://localhost:5000/allRooms'
+       }) 
+       .then(res => console.log(res.data))
+       .catch(err => console.error(err));
         };
+      
+        
       
     const thumbStyle = {
         position: 'absolute',
@@ -96,7 +103,7 @@ const Roomthumbnails = () => {
                     <Button
                         name='View details'
                         className='viewdetails'
-                        link='/roomdetails'
+                        click={ getRooms}
                     />
                 </div>
             </div>
@@ -107,7 +114,7 @@ const Roomthumbnails = () => {
                     <Button
                         name='View details'
                         className='viewdetails'
-                        link='/roomdetails'
+                        click={ getRooms}
                     />
                 </div>
             </div>
@@ -118,14 +125,14 @@ const Roomthumbnails = () => {
                     <Button
                         name='View details'
                         className='viewdetails'
-                        link='/roomdetails'
+                        click={ getRooms}
                     />
                 </div>
             </div>
             <Button
                 name='View more'
                 className='viewmore'
-                link='rooms'
+                click={ getRooms}
             />
         </Fragment>
     )
