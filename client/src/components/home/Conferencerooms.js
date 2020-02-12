@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
 import cfr from './home.module.css';
-import Button from '../buttons/Buttons'
+import Button from '../buttons/Buttons';
+// import axios from 'axios';
+
 
 const Conferencerooms = () => {
     return (
@@ -51,6 +53,11 @@ const Info = (props) => {
 }
 
 const Roomthumbnails = () => {
+
+    const getRooms =  () => {
+       console.log('clicked')
+        };
+      
     const thumbStyle = {
         position: 'absolute',
         backgroundColor: 'rgba(0, 0, 0, 0.46)',
@@ -78,7 +85,7 @@ const Roomthumbnails = () => {
                     <Button
                         name='View details'
                         className='viewdetails'
-                        link='/roomdetails'
+                        click={ getRooms}
                     />
                 </div>
             </div>
