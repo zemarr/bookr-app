@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import cfr from './home.module.css';
-import Button from '../buttons/Buttons'
+import Button from '../buttons/Buttons';
 
 const Conferencerooms = () => {
     return (
@@ -70,6 +70,11 @@ const Roomthumbnails = () => {
         left: '34px',
         top: '50px'
     }
+
+    const handleClick = () => {
+        console.log('this button was clicked');
+    }
+    
     return (
         <Fragment>
             <div className={cfr.marketingbg}>
@@ -79,6 +84,7 @@ const Roomthumbnails = () => {
                         name='View details'
                         className='viewdetails'
                         link='/roomdetails'
+                        clickFunc={handleClick}
                     />
                 </div>
             </div>
