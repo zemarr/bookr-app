@@ -3,7 +3,6 @@
     letter-spacing: -0.5px;
 }
 
-
 .nav {
     display: flex;
     height: 60px;
@@ -77,11 +76,11 @@
 }
 
 .heading section {
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 1.4rem;
+    font-weight: 400;
     color: white;
-    border-left: solid 4px white;
-    padding-left: 30px;
+    border-left: solid 2px white;
+    padding-left: 45px;
 }
 
 .rooms {
@@ -92,7 +91,6 @@
 }
 
 .rooms section {
-    /* height: 500px; */
     width: 500px;
     border-radius: 6px;
     align-self: start;
@@ -101,19 +99,20 @@
 .rooms section h4 {
     margin-bottom: 4rem;
     letter-spacing: -0.3px;
-    font-size: 1.6rem;
-    border-bottom: 3px solid rgba(0, 128, 0, 0.61);
+    font-size: 1.4rem;
+    border-bottom: 1px solid #078f95;
     line-height: 65px;
     width: 400px;
 }
 
-.rooms section p {
-    font-size: 1.3rem;
-    letter-spacing: -0.7px;
+.meetingroominfo h4 {
+    border-bottom: solid 1px green;
+    margin: 1.5rem;
 }
 
-.conferencesection {
-    margin: 0 100px;
+.meetingroominfo p {
+    width: 350px;
+    font-weight: 700;
 }
 
 .sectionheading {
@@ -124,7 +123,7 @@
 }
 
 .roomthumbnails {    
-    border: solid 2px #078f68;
+    border: solid 1px #078f686b;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -134,7 +133,7 @@
 .roomthumbnails div {
     width: 13rem;
     height: 13rem;
-    border: solid .5px black;
+    border: solid .5px #078f95;
     border-radius: 3px;
     margin: 25px;
     -webkit-border-radius: 3px;
@@ -189,23 +188,25 @@
     margin-bottom: 10rem;
 }
 
-.info {
-    /* padding: 0 20px; */
-    height: 200px;
+.features {
+    width: 250px;
+    margin: 0 0 2rem 0;
+    text-align: center;
 }
 
-.info h4 {
+.features span {
+    font-size: 4.5rem;
+    color: #078f68;
+}
+
+.features h4 {
     color: #078f68;
     font-size: 1.3rem;
-    margin-bottom: 2rem;
-    text-align: center;
+    margin: 1.5rem 0;
 }
 
-.info p {
+.features p {
     font-size: 0.95rem;
-    /* font-weight: 500; */
-    /* padding: 0 26px; */
-    text-align: center;
 }
 
 .card {

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import MeetingRooms from '../home/Meetingrooms';
+import MeetingRooms from '../meetings/Meetingrooms';
 import Home from '../home/Home';
 
 const Routes = () => {

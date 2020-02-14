@@ -5,7 +5,7 @@ import Button from '../buttons/Buttons';
 const Conferencerooms = () => {
     return (
         <Fragment>
-            <div className={cfr.conferencesection}>
+            <div className='container'>
                 <Heading name='Conference rooms' />
                 <Smallrooms />
             </div>
@@ -23,18 +23,20 @@ export const Heading = (props) => {
 
 export const Smallrooms = () => {
     return (
-        <div className={cfr.rooms}>
-            <section>
-                <Info
-                    name='Small Meeting rooms'
-                    paragraph1='The small meeting room contains less people, it contains maximum of 9 persons and a big table.'
-                    paragraph2='Small rooms section ere quite small but very comfortable. Each room has unique features that enable your way to the perfect meetings.'
-                    paragraph3='The small meeting sector contains less people with'
-                />
-            </section>
-            <section className={cfr.roomthumbnails}>
-                <Roomthumbnails />
-            </section>
+        <div className='row'>
+            <div className='col-md-6'>
+                <section className={cfr.meetingroominfo}>
+                    <Info
+                        name='Small Meeting rooms'
+                        paragraph='The small meeting room contains less people, it contains maximum of 9 persons and a big table. Our meeting rooms are quite spacious and very comfortable with unique features that create the perfect environment for your meetings.'
+                    />
+                </section>
+            </div>
+            <div className='col-md-6'>
+                <section className={cfr.roomthumbnails}>
+                    <Roomthumbnails />
+                </section>
+            </div>
         </div>
     )
 }
@@ -43,9 +45,7 @@ const Info = (props) => {
     return (
         <Fragment>
             <h4>{props.name}</h4>
-            <p>{props.paragraph1}</p>
-            <p>{props.paragraph2}</p>
-            <p>{props.paragraph3}</p>
+            <p>{props.paragraph}</p>
         </Fragment>
     )
 }
@@ -74,7 +74,7 @@ const Roomthumbnails = () => {
     const handleClick = () => {
         console.log('this button was clicked');
     }
-    
+
     return (
         <Fragment>
             <div className={cfr.marketingbg}>
