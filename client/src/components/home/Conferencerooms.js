@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
 import cfr from './home.module.css';
 import Button from '../buttons/Buttons';
+import axios from 'axios';
+
 
 const Conferencerooms = () => {
     return (
@@ -51,6 +53,18 @@ const Info = (props) => {
 }
 
 const Roomthumbnails = () => {
+
+    const getRooms =   () => {
+       axios ({
+           method: 'get',
+           url: 'http://localhost:5000/allRooms'
+       }) 
+       .then(res => console.log(res.data))
+       .catch(err => console.error(err));
+        };
+      
+        
+      
     const thumbStyle = {
         position: 'absolute',
         backgroundColor: 'rgba(0, 0, 0, 0.46)',
@@ -70,11 +84,6 @@ const Roomthumbnails = () => {
         left: '34px',
         top: '50px'
     }
-
-    const handleClick = () => {
-        console.log('this button was clicked');
-    }
-
     return (
         <Fragment>
             <div className={cfr.marketingbg}>
@@ -83,8 +92,7 @@ const Roomthumbnails = () => {
                     <Button
                         name='View details'
                         className='viewdetails'
-                        link='/roomdetails'
-                        clickFunc={handleClick}
+                        click={ getRooms}
                     />
                 </div>
             </div>
@@ -95,7 +103,7 @@ const Roomthumbnails = () => {
                     <Button
                         name='View details'
                         className='viewdetails'
-                        link='/roomdetails'
+                        click={ getRooms}
                     />
                 </div>
             </div>
@@ -106,7 +114,7 @@ const Roomthumbnails = () => {
                     <Button
                         name='View details'
                         className='viewdetails'
-                        link='/roomdetails'
+                        click={ getRooms}
                     />
                 </div>
             </div>
@@ -117,14 +125,14 @@ const Roomthumbnails = () => {
                     <Button
                         name='View details'
                         className='viewdetails'
-                        link='/roomdetails'
+                        click={ getRooms}
                     />
                 </div>
             </div>
             <Button
                 name='View more'
                 className='viewmore'
-                link='rooms'
+                click={ getRooms}
             />
         </Fragment>
     )
