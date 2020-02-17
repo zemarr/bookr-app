@@ -28,7 +28,7 @@ const Heading = (props) => {
                 <Button
                     name='Book room'
                     className='bookroom'
-                    link='/meetingrooms'
+                    link='/dashboard/meetingrooms'
                 />
             </section>
         </Fragment>
