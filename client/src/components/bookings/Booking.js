@@ -3,6 +3,7 @@ import DateTimePicker from 'react-datetime-picker';
 import { Form,Col, Card } from 'react-bootstrap';
 import Button from '../buttons/Buttons'
 
+
 class Booking extends React.Component {
     constructor(props) {
       super(props);
@@ -16,6 +17,7 @@ class Booking extends React.Component {
       this.handleInputChange = this.handleInputChange.bind(this);
     }
   
+    
     handleInputChange(event) {
       const target = event.target;
       const value =  target.value;
@@ -24,11 +26,19 @@ class Booking extends React.Component {
       this.setState({
         [name]: value
       });
-      console.log(this.state)
+      // console.log(this.state)
     }
 
-   onChange = event => console.log(this.setState({ date: event.target.value }))
+    onChange = date => {this.setState({date: date})
+    // console.log(this.state)
+  }
+
+  onSubmit = () => {
+    console.log('clicked')
+    let booking = this.state
+    console.log(booking)
   
+  }
     render() {
       return (
           <div>
@@ -66,15 +76,18 @@ class Booking extends React.Component {
           </select>
         </label>
         <br />
+        <div>
         <DateTimePicker
-        onChange={this.onChange}
-        value={this.state.date}
-        required
-        /> 
+          onChange={this.onChange}
+          value={this.state.date}
+        />
+      </div>
+ 
+     
         </form>
         <Button 
         name='Book Room'
-       
+       click={this.onSubmit}
         />
         </div>
       );
