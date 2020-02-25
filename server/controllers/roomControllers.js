@@ -1,5 +1,6 @@
 const Room = require('../models/Rooms')
 
+
 module.exports.readAllRooms = (req, res) => {
   Room.find()
   .then(rooms => res.json(rooms))

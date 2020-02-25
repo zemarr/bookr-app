@@ -34,7 +34,7 @@ class Booking extends React.Component {
   }
 
   onSubmit = () => {
-    console.log('clicked')
+   
     let booking = this.state
     console.log(booking)
   
