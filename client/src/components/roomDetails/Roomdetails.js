@@ -1,12 +1,11 @@
 import React, { useState, useEffect} from 'react';
 import { Card } from 'react-bootstrap';
 import axios from 'axios';
+import Button from '../buttons/Buttons'
 
 export default function Roomdetails() {
     const [room1, setRoom1] = useState([]);
-    const [room2, setRoom2] = useState([]);
-    const [room3, setRoom3] = useState([]);
-    const [room4, setRoom4] = useState([]);
+  
 
     const getRooms = async () => {
         try {
@@ -22,7 +21,11 @@ export default function Roomdetails() {
     return (
         <div>
             <div>
-            <button onClick={getRooms}>Room1</button>
+            <Button 
+             name='View details'
+             className='viewdetails'
+             click={getRooms}
+            />
             {room1.map((room, i) => {
                 return(
                     <Card style={{ margin: '5px'}}>

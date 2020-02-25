@@ -1,24 +1,13 @@
-import React, { Component } from 'react';
-import DateTimePicker from 'react-datetime-picker';
+import React, {Fragment} from 'react';
 
-class Createmeeting extends Component {
-  state = {
-    date: new Date(),
-  }
-
-  onChange = date => this.setState({ date })
-
-  render() {
+const Createmeeting = () => {
     return (
-      <div>
-        <h1>hello</h1>
-        <DateTimePicker
-          onChange={this.onChange}
-          value={this.state.date}
-        />
-      </div>
-    );
-  }
+        <Fragment>
+            <div>
+
+            </div>
+        </Fragment>
+    )
 }
 
 export default Createmeeting;
