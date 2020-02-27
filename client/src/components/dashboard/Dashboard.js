@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import './dashboard.css';
 import Meetingrooms from './Meetingrooms';
-import Createmeeting from './Mymeetings';
 import Mymeetings from './Mymeetings';
+import Booking from './Booking';
 import {
     BrowserRouter as Router,
     Switch,
@@ -22,7 +22,7 @@ const routes = [
     },
     {
         path: '/dashboard/createmeeting',
-        main: () => <Createmeeting />
+        main: () => <Booking />
     }
 ]
 

@@ -2,11 +2,11 @@ import React, { Fragment, useState } from 'react';
 import './dashboard.css';
 import axios from 'axios';
 import Button from '../buttons/Buttons';
-import Roomdetails from '../roomDetails/Roomdetails'
+// import { getSalesRoom } from '../functions/Functions';
 
 
 const MeetingRooms = () => {
-   
+
     return (
         <Fragment>
             <div className='headings'>
@@ -18,34 +18,13 @@ const MeetingRooms = () => {
                     <Salesroom />
                     <Boardroom />
                     <Techroom />
-                    <Roomdetails />
                 </div>
-                
             </div>
         </Fragment>
     )
 }
 
 const Marketingroom = () => {
-    const [room1, setRoom1] = useState([])
-  
-    //function to call the room details api
-    const getRooms = async () => {
-        try {
-            const response = await axios.get('http://localhost:5000/allRooms')
-            console.log(response)
-           const responseData = await response.data
-           console.log(responseData)
-          console.log(response.data)
-            // set the state here
-          setRoom1(responseData)
-        } catch (error) {
-            console.error(error);
-          }
-        }
-     
-    
-
     return (
         <div className='marketingbg'>
             <div className='overlay'>
@@ -53,33 +32,14 @@ const Marketingroom = () => {
                 <Button
                     name='View details'
                     className='viewdetails'
-                    click={getRooms}
-                />  
+                    link='/roomdetails'
+                />
             </div>
-                 
-            <div>
-                {room1.map((rooms, i) => {
-                    return (
-                        //and  tried to display it here
-                        <div key ={i}>
-                            <p>{rooms.name}</p>
-                        </div>
-                    )
-                })}
-                </div> 
-        </div>
+        </div >
     )
 }
 
 const Salesroom = () => {
-    const getRooms = () => {
-        axios({
-            method: 'get',
-            url: 'http://localhost:5000/allRooms'
-        })
-            .then(res => console.log(res.data))
-            .catch(err => console.error(err));
-    };
 
     return (
         <div className='salesbg'>
@@ -88,7 +48,7 @@ const Salesroom = () => {
                 <Button
                     name='View details'
                     className='viewdetails'
-                    click={getRooms}
+                    // click={getSalesRoom}
                 />
             </div>
         </div>
@@ -96,14 +56,6 @@ const Salesroom = () => {
 }
 
 const Boardroom = () => {
-    const getRooms = () => {
-        axios({
-            method: 'get',
-            url: 'http://localhost:5000/allRooms'
-        })
-            .then(res => console.log(res.data))
-            .catch(err => console.error(err));
-    };
 
     return (
         <div className='boardbg'>
@@ -112,7 +64,7 @@ const Boardroom = () => {
                 <Button
                     name='View details'
                     className='viewdetails'
-                    click={getRooms}
+                    // click={getRooms}
                 />
             </div>
         </div>
@@ -120,14 +72,6 @@ const Boardroom = () => {
 }
 
 const Techroom = () => {
-    const getRooms = () => {
-        axios({
-            method: 'get',
-            url: 'http://localhost:5000/allRooms'
-        })
-            .then(res => console.log(res.data))
-            .catch(err => console.error(err));
-    };
 
     return (
         <div className='techbg'>
@@ -136,7 +80,7 @@ const Techroom = () => {
                 <Button
                     name='View details'
                     className='viewdetails'
-                    click={getRooms}
+                    // click={getRooms}
                 />
             </div>
         </div>

@@ -7,7 +7,6 @@ const Button = (props) => {
         <Link to={props.link}>
             <button type={props.type} className={btn[props.className]} onClick={props.click}>
                 {props.name}
-              
             </button>
         </Link>
 
