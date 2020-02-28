@@ -74,13 +74,13 @@ const Social = () => {
             <section>
                 <ul>
                     <li>
-                        <a href="/#" target="_blank"><i class="fa fa-facebook-f"></i> &nbsp; &nbsp; &nbsp; Facebook</a>
+                        <a href="/#" target="_blank"><i className="fa fa-facebook-f"></i> &nbsp; &nbsp; &nbsp; Facebook</a>
                     </li>
                     <li>
-                        <a href="/#" target="_blank"><i class="fa fa-twitter"></i> &nbsp; &nbsp; Twitter</a>
+                        <a href="/#" target="_blank"><i className="fa fa-twitter"></i> &nbsp; &nbsp; Twitter</a>
                     </li>
                     <li>
-                        <a href="/#" target="_blank"><i class="fa fa-instagram"></i> &nbsp; &nbsp; Instagram</a>
+                        <a href="/#" target="_blank"><i className="fa fa-instagram"></i> &nbsp; &nbsp; Instagram</a>
                     </li>
                 </ul>
             </section>

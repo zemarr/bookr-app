@@ -1,8 +1,7 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment } from 'react';
 import './dashboard.css';
-import axios from 'axios';
 import Button from '../buttons/Buttons';
-// import { getSalesRoom } from '../functions/Functions';
+import { getSalesRoom } from '../functions/Functions';
 
 
 const MeetingRooms = () => {
@@ -48,7 +47,8 @@ const Salesroom = () => {
                 <Button
                     name='View details'
                     className='viewdetails'
-                    // click={getSalesRoom}
+                    link='/roomdetails'
+                    click={getSalesRoom}
                 />
             </div>
         </div>
@@ -64,7 +64,8 @@ const Boardroom = () => {
                 <Button
                     name='View details'
                     className='viewdetails'
-                    // click={getRooms}
+                    link='/roomdetails'
+                    click={getSalesRoom}
                 />
             </div>
         </div>
@@ -80,7 +81,8 @@ const Techroom = () => {
                 <Button
                     name='View details'
                     className='viewdetails'
-                    // click={getRooms}
+                    link='/roomdetails'
+                    click={getSalesRoom}
                 />
             </div>
         </div>
