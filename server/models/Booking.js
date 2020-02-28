@@ -3,24 +3,25 @@ const Schema = mongoose.Schema;
 
 const BookingSchema = new Schema({
     firstname: {
-        type: string,
+        type: String,
         required: true,
         trim: true
     },
     lastname: {
-        type: string,
+        type: String,
         required: true,
         trim: true
     },
-    value: {
-        type: string,
+    startDate: {
+        type: Date,
+        type: String,
+    },
+    room: {
+        type: String,
         required: true,
         trim: true
-    },    
-    date: {
-        type: Date,
-        type: string,
-    }
+    }   
+   
 });
 
  const Booking = mongoose.model('booking', BookingSchema);
