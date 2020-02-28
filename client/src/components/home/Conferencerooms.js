@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import cfr from './home.module.css';
 import Button from '../buttons/Buttons';
-import axios from 'axios';
 
 
 const Conferencerooms = () => {
@@ -53,19 +52,7 @@ const Info = (props) => {
 }
 
 export const Roomthumbnails = () => {
-
-    const getRooms = () => {
-        axios({
-            method: 'get',
-            url: 'http://localhost:5000/allRooms'
-        })
-            .then(res => console.log(res.data))
-            .catch(err => console.error(err));
-    };
-
-
-
-    const thumbStyle = {
+const thumbStyle = {
         position: 'absolute',
         backgroundColor: 'rgba(0, 0, 0, 0.46)',
         width: '100%',
@@ -86,7 +73,6 @@ export const Roomthumbnails = () => {
     }
 
     return (
-        
         <Fragment>
             <div className={cfr.marketingbg}>
                 <div style={thumbStyle}>
@@ -94,7 +80,7 @@ export const Roomthumbnails = () => {
                     <Button
                         name='View details'
                         className='viewdetails'
-                        click={getRooms}
+                        // click={getRooms}
                     />
                 </div>
             </div>
@@ -105,7 +91,7 @@ export const Roomthumbnails = () => {
                     <Button
                         name='View details'
                         className='viewdetails'
-                        click={getRooms}
+                        // click={getRooms}
                     />
                 </div>
             </div>
@@ -116,7 +102,7 @@ export const Roomthumbnails = () => {
                     <Button
                         name='View details'
                         className='viewdetails'
-                        click={getRooms}
+                        // click={getRooms}
                     />
                 </div>
             </div>
@@ -127,15 +113,10 @@ export const Roomthumbnails = () => {
                     <Button
                         name='View details'
                         className='viewdetails'
-                        click={getRooms}
+                        // click={getRooms}
                     />
                 </div>
             </div>
-            <Button
-                name='View more'
-                className='viewmore'
-                click={getRooms}
-            />
         </Fragment>
     )
 }
