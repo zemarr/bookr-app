@@ -9,22 +9,6 @@ const Navbar = () => {
                 <Link to='/'>
                     <h4>Book-R</h4>
                 </Link>
-                <Link to='/dashboard/meetingrooms'>
-                    <p>Meeting rooms</p>
-                </Link>
-                <Link to='/checkavailability'>
-                    <p>Check Availability</p>
-                </Link>
-                {/* <div className={hm.navutils}>
-                    <Button
-                        name='Sign in'
-                        className='signin'
-                    />
-                    <Button
-                        name='Register'
-                        className='signup'
-                    />
-                </div> */}
             </nav>
         </Fragment>
     )
