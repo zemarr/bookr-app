@@ -12,8 +12,7 @@ module.exports.bookRoom = (req, res) => {
     const room = req.body;
     let name = room.room;
     let time = room.startDate
-    // Booking.findOne({ room : name, startDate : time})
-    Booking.findOne({ room : name})
+    Booking.findOne({ room : name, startDate : time})
     .then((booked) => {
       if(booked) {
         return 'room and time has already been booked, please choose another'
