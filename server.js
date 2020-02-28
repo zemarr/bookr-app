@@ -11,7 +11,7 @@ app.use(cors());
 //body parser middleware
 app.use(bodyParser.json());
 
-const routes = require('./server/routes/roomRoutes')
+const routes = require('./server/routes/routes')
 routes(app)
 
 //DB config

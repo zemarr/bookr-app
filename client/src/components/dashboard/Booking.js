@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import DateTimePicker from 'react-datetime-picker';
-// import { Form, Col, Card } from 'react-bootstrap';
 import Button from '../buttons/Buttons'
+// new
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 
 class Booking extends Component {
@@ -10,8 +11,7 @@ class Booking extends Component {
         this.state = {
             firstname: '',
             lastname: '',
-            value: '',
-            date: new Date()
+            startDate: new Date()
         };
 
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -30,9 +30,10 @@ class Booking extends Component {
     }
 
     onChange = date => {
-        this.setState({ date: date })
+        this.setState({ startDate: date })
         // console.log(this.state)
     }
+   
 
     onSubmit = () => {
 
@@ -67,7 +68,8 @@ class Booking extends Component {
                     <br />
                     <label>Select Room
                         <select value={this.state.room}
-                            onChange={this.handleInputChange}>
+                            onChange={this.handleInputChange}
+                            name = 'room'>
                             <option value="">---select room---</option>
                             <option value="board room">Board Room</option>
                             <option value="marketing room">Marketing Room</option>
@@ -77,9 +79,14 @@ class Booking extends Component {
                     </label>
                     <br />
                     <div>
-                        <DateTimePicker
+                       <DatePicker
+                            selected={this.state.startDate}
                             onChange={this.onChange}
-                            value={this.state.date}
+                            showTimeSelect
+                            timeFormat="HH:mm"
+                            timeIntervals={30}
+                            timeCaption="time"
+                            dateFormat="MMMM d, yyyy h:mm"
                         />
                     </div>
                 </form>
