@@ -11,6 +11,9 @@
     background-color: #078f68;
     box-shadow: 0px -4px 17px 8px rgba(0,0,0,0.25);
     z-index: 10;
+    -webkit-box-shadow: inset 1px 1px 46px -9px rgba(235,235,235,1);
+    -moz-box-shadow: inset 1px 1px 46px -9px rgba(235,235,235,1);
+    box-shadow: inset 1px 1px 46px -9px rgba(235,235,235,1);
 }
 
 .nav h4 {

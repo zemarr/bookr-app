@@ -33,7 +33,7 @@ class Booking extends Component {
         this.setState({ startDate: date })
         // console.log(this.state)
     }
-   
+
 
     onSubmit = () => {
 
@@ -43,21 +43,22 @@ class Booking extends Component {
     }
     render() {
         return (
-            <div>
+            <div className='book-container'>
+                <p>New Booking</p>
                 <form>
                     <label>
-                        First Name
-                        <input
+                        Meeting Title <br />
+                        <input className='book-input'
                             name="firstname"
                             type="text"
                             value={this.state.firstname}
                             onChange={this.handleInputChange}
                             required
-                            />
+                        />
                     </label>
                     <br />
-                    <label>Last Name:
-                        <input
+                    <label>Description <br />
+                        <input className='book-input'
                             name="lastname"
                             type="text"
                             value={this.state.lastname}
@@ -66,29 +67,32 @@ class Booking extends Component {
                         />
                     </label>
                     <br />
-                    <label>Select Room
-                        <select value={this.state.room}
-                            onChange={this.handleInputChange}
-                            name = 'room'>
-                            <option value="">---select room---</option>
-                            <option value="board room">Board Room</option>
-                            <option value="marketing room">Marketing Room</option>
-                            <option value="sales room">Sales Room</option>
-                            <option value="tech room">Tech Room</option>
-                        </select>
-                    </label>
-                    <br />
                     <div>
-                       <DatePicker
-                            selected={this.state.startDate}
-                            onChange={this.onChange}
-                            showTimeSelect
-                            timeFormat="HH:mm"
-                            timeIntervals={30}
-                            timeCaption="time"
-                            dateFormat="MMMM d, yyyy h:mm"
-                        />
+                        <label>Select meeting Room <br />
+                            <select value={this.state.room}
+                                onChange={this.handleInputChange}
+                                name='room' className='book-input'>
+                                <option value="">  ---select room---  </option>
+                                <option value="board room">Board Room</option>
+                                <option value="marketing room">Marketing Room</option>
+                                <option value="sales room">Sales Room</option>
+                                <option value="tech room">Tech Room</option>
+                            </select>
+                        </label>
+                        <label>Date & Time <br />
+                            <DatePicker
+                                selected={this.state.startDate}
+                                onChange={this.onChange}
+                                showTimeSelect
+                                timeFormat="HH:mm"
+                                timeIntervals={30}
+                                timeCaption="time"
+                                dateFormat="MMMM d, yyyy h:mm"
+                            />
+                        </label>
                     </div>
+
+                    <br />
                 </form>
                 <Button
                     name='Book Room'

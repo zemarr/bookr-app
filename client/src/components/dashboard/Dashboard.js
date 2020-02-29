@@ -32,18 +32,20 @@ const Dashboard = () => {
             <Router>
                 <div className='container-fluid mrcontainer'>
                     <div className='row'>
-                        <div className='col-md-3 roomsidebar'>
-                            <ul>
-                                <Link to='/dashboard/mymeetings'>
-                                    <li>Check availability</li>
-                                </Link>
-                                < Link to='/dashboard/meetingrooms'>
-                                    <li>Meeting rooms</li>
-                                </Link>
-                                <Link to='/dashboard/createmeeting'>
-                                    <li>Create a Meeting</li>
-                                </Link>
-                            </ul>
+                        <div className='col-md-3 pr-dropshadow'>
+                            <div className=' roomsidebar'>
+                                <ul>
+                                    <Link to='/dashboard/mymeetings'>
+                                        <li>Check availability</li>
+                                    </Link>
+                                    < Link to='/dashboard/meetingrooms'>
+                                        <li>Meeting rooms</li>
+                                    </Link>
+                                    <Link to='/dashboard/createmeeting'>
+                                        <li>Create a Meeting</li>
+                                    </Link>
+                                </ul>
+                            </div>
                             <Switch>
                                 {routes.map((route, index) => (
                                     <Route key={index} path={route.path} exact={route.exact} />

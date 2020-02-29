@@ -60,15 +60,18 @@ button {
     color: #078f68;
     background-color: white;
     border: solid 2px transparent;
+    -webkit-box-shadow: inset 1px 1px 90px -48px rgba(7,143,104,1);
+    -moz-box-shadow: inset 1px 1px 90px -48px rgba(7,143,104,1);
+    box-shadow: inset 1px 1px 90px -48px rgba(7,143,104,1);
 }
 
-.learnmorebtn {
+.bookmeetingroom {
     margin: 0;
-    margin-top: 3rem;
+    margin-top: 1rem;
     height: 50px;
-    width: 300px;
+    width: 270px;
     background-color: transparent;
-    color:#078f68;
+    color: #078f68;
     font-size: 1.1rem;
     border: solid 2px #078f68;
     border-radius: 4px;
@@ -79,13 +82,13 @@ button {
     -o-transition: ease-in-out .1s;
 }
 
-.learnmorebtn:hover {
+.bookmeetingroom:hover {
     font-weight: 500;
     color: white;
     background-color: #078f68;
 }
 
-.viewmore {
+/* .viewmore {
     margin: 0;
     margin-top: 1rem;
     margin-bottom: 2rem;
@@ -107,7 +110,7 @@ button {
     font-weight: 500;
     color: white;
     background-color: #078f68;
-}
+} */
 
 
 .viewdetails {
