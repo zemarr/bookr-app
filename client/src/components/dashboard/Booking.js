@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import Button from '../buttons/Buttons'
+<<<<<<< HEAD
 import axios from 'axios'
 // new
+=======
+>>>>>>> 6a7630a8b041f00b3ad112d1fbdbc94c2e744a78
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 

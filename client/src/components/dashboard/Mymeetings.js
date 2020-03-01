@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import React, {Fragment, useEffect, useState} from 'react';
 import axios from 'axios';
 import { Card } from 'react-bootstrap'
+=======
+import React, { Fragment } from 'react';
+import { TiPencil } from 'react-icons/ti';
+import { AiOutlineClose } from 'react-icons/ai';
+>>>>>>> 6a7630a8b041f00b3ad112d1fbdbc94c2e744a78
 
 const Mymeetings = () => {
     const [booked, setBooked] = useState([]);
@@ -25,6 +31,7 @@ const Mymeetings = () => {
     
     return (
         <Fragment>
+<<<<<<< HEAD
             <div>
 
                 {booked.map((booked, i) => {
@@ -41,6 +48,38 @@ const Mymeetings = () => {
                         </Card>
                     )
                 })}
+=======
+            <div className='mymeetings container-fluid'>
+                <p>Scheduled meetings</p>
+                <div className="card w-75 customcard">
+                    <div className="card-body customcard">
+                        <div className='utilityicons'>
+                            <TiPencil className='edit' /> <AiOutlineClose className='close' />
+                        </div>
+                        <h5 className="card-title">Meeting name</h5>
+                        <p className="card-text">Meeting description</p>
+                    </div>
+                </div>
+            </div>
+        </Fragment>
+    )
+}
+
+const Mymeetings2 = () => {
+    return (
+        <Fragment>
+            <div className='mymeetings container-fluid'>
+                <p>Scheduled meetings</p>
+                <div className="card w-75 customcard">
+                    <div className="card-body customcard">
+                        <div className='utilityicons'>
+                            <TiPencil className='edit' /> <AiOutlineClose className='close' />
+                        </div>
+                        <h5 className="card-title">Meeting name</h5>
+                        <p className="card-text">Meeting description</p>
+                    </div>
+                </div>
+>>>>>>> 6a7630a8b041f00b3ad112d1fbdbc94c2e744a78
             </div>
         </Fragment>
     )
