@@ -2,19 +2,21 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const BookingSchema = new Schema({
-    firstname: {
+    meetingTitle: {
         type: String,
         required: true,
         trim: true
     },
-    lastname: {
+    description: {
         type: String,
         required: true,
         trim: true
     },
     startDate: {
         type: Date,
-        type: String,
+        required: true,
+        trim: true
+        
     },
     room: {
         type: String,

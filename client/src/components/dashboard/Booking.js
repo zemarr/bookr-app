@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Button from '../buttons/Buttons'
+import axios from 'axios'
 // new
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -9,8 +10,8 @@ class Booking extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            firstname: '',
-            lastname: '',
+            meetingTitle: '',
+            description: '',
             startDate: new Date()
         };
 
@@ -34,13 +35,21 @@ class Booking extends Component {
         // console.log(this.state)
     }
 
-
-    onSubmit = () => {
-
-        let booking = this.state
-        console.log(booking)
-
+       
+    createMyMeeting = async () => {
+    let booking = this.state
+    console.log(booking)
+    try {
+        const response = await axios.post("http://localhost:5000/api/roombookings", booking);
+        const responseData = await response.data;
+        const meetingRoom = responseData;
+        console.log(meetingRoom); 
+    } catch (error) {
+        console.error(error);
+    }         
     }
+    
+
     render() {
         return (
             <div className='book-container'>
@@ -49,9 +58,9 @@ class Booking extends Component {
                     <label>
                         Meeting Title <br />
                         <input className='book-input'
-                            name="firstname"
+                            name="meetingTitle"
                             type="text"
-                            value={this.state.firstname}
+                            value={this.state.meetingTitle}
                             onChange={this.handleInputChange}
                             required
                         />
@@ -59,9 +68,9 @@ class Booking extends Component {
                     <br />
                     <label>Description <br />
                         <input className='book-input'
-                            name="lastname"
+                            name="description"
                             type="text"
-                            value={this.state.lastname}
+                            value={this.state.description}
                             onChange={this.handleInputChange}
                             required
                         />
@@ -96,7 +105,7 @@ class Booking extends Component {
                 </form>
                 <Button
                     name='Book Room'
-                    click={this.onSubmit}
+                    click={this.createMyMeeting}
                 />
             </div>
         );

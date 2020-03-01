@@ -1,7 +1,6 @@
 import React, { Fragment, useState } from "react";
 import "./dashboard.css";
 import Button from "../buttons/Buttons";
-import { getSalesRoom } from "../functions/Functions";
 import axios from "axios";
 import Booking from '../dashboard/Booking';
 import { GoDeviceDesktop } from 'react-icons/go';
