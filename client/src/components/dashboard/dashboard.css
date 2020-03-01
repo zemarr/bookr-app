@@ -151,20 +151,57 @@
     z-index: 1;
 }
 
+.custommodal {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 260vh;
+    background-color: white;
+    position: relative;
+    top: -395px;
+    z-index: 1;
+}
+
 .cm-0 {
     left: -381px;
+    z-index: 1;
 }
 
 .cm-1 {
     left: -625px;
+    z-index: 1;
 }
 
 .cm-2 {
     left: -870px;
+    z-index: 1;
 }
 
 .cm-3 {
     left: -1114px;
+    z-index: 1;
+}
+
+.cm0 {
+    left: -729px;
+    z-index: 1;
+}
+
+.cm1 {
+    left: -985px;
+    z-index: 1;
+}
+
+.cm2 {
+    left: -730px;
+    top: -630px;
+    z-index: 1;
+}
+
+.cm3 {
+    left: -985px;
+    top: -630px;
+    z-index: 1;
 }
 
 .modal-box {
@@ -281,6 +318,47 @@
 
 .roomdescription p:nth-child(4) {
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 2rem;
+}
+
+.mymeetings {
+    padding: 0 3rem; 
+}
+
+.mymeetings p:first-child {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 2rem 0;
+}
+
+.customcard {
+    position: relative;
+}
+
+.utilityicons {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: absolute;
+    width: 60px;
+    left: 600px;
+    margin: 0;
+    padding: 0;
+}
+
+.utilityicons svg {
+    margin: 0 0.44rem;
+}
+
+.close {
+    color: red;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.edit {
+    color: rgb(161, 161, 161);
+    font-size: 1rem;
+    cursor: pointer;
 }

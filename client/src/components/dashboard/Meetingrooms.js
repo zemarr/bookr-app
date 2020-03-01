@@ -1,9 +1,9 @@
 import React, { Fragment, useState } from "react";
 import "./dashboard.css";
 import Button from "../buttons/Buttons";
-import { getSalesRoom } from "../functions/Functions";
+// import { getSalesRoom } from "../functions/Functions";
 import axios from "axios";
-import Booking from '../dashboard/Booking';
+// import Booking from '../dashboard/Booking';
 import { GoDeviceDesktop } from 'react-icons/go';
 import { IoLogoGameControllerB } from 'react-icons/io';
 import { AiOutlineClose } from 'react-icons/ai';
@@ -30,7 +30,7 @@ const MeetingRooms = () => {
 
 
 
-const Marketingroom = () => {
+export const Marketingroom = () => {
   const [marketingroom, setMarketingRoom] = useState([]);
 
   const getMarketingRoom = async () => {
@@ -99,7 +99,7 @@ const Marketingroom = () => {
 
 
 
-const Salesroom = () => {
+export const Salesroom = () => {
   const [salesroom, setSalesRoom] = useState([]);
 
   const getSalesRoom = async () => {
@@ -166,7 +166,7 @@ const Salesroom = () => {
 
 
 
-const Boardroom = () => {
+export const Boardroom = () => {
   const [boardroom, setBoardRoom] = useState([]);
 
   const getBoardRoom = async () => {
@@ -234,7 +234,7 @@ const Boardroom = () => {
 
 
 
-const Techroom = () => {
+export const Techroom = () => {
   const [techroom, setTechroom] = useState([]);
 
   const getTechRoom = async () => {

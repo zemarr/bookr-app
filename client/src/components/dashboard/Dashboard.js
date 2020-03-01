@@ -36,7 +36,7 @@ const Dashboard = () => {
                             <div className=' roomsidebar'>
                                 <ul>
                                     <Link to='/dashboard/mymeetings'>
-                                        <li>Check availability</li>
+                                        <li>Meetings</li>
                                     </Link>
                                     < Link to='/dashboard/meetingrooms'>
                                         <li>Meeting rooms</li>

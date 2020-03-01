@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Dashboard from '../dashboard/Dashboard';
 import Home from '../home/Home';
 import Navbar from '../home/Navbar';
-import Booking from '../dashboard/Booking';
 
 const Routes = () => {
     return (
@@ -13,8 +12,9 @@ const Routes = () => {
                 <Switch>
                     <div>
                         <Route path='/' exact component={Home} />
-                        <Route path='/dashboard/meetingrooms' component={Dashboard} />
-                        {/* <Route path='/dashboard/meetingrooms/createmeeting' compnent={Booking} /> */}
+                        <Route path='/dashboard/mymeetings' exact component={Dashboard} />
+                        <Route path='/dashboard/meetingrooms' exact component={Dashboard} />
+                        <Route path='/dashboard/createmeeting' exact component={Dashboard} />
                     </div>
                 </Switch>
             </Router>

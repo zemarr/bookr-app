@@ -138,18 +138,6 @@
     align-items: center;
 }
 
-.roomthumbnails div {
-    width: 13rem;
-    height: 13rem;
-    border: solid .5px #078f68;
-    border-radius: 3px;
-    margin: 25px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-}
-
 .marketingbg {
     width: 100%;
     position: relative;
