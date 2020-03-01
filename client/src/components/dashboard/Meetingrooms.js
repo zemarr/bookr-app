@@ -1,10 +1,7 @@
 import React, { Fragment, useState } from "react";
 import "./dashboard.css";
 import Button from "../buttons/Buttons";
-<<<<<<< HEAD
-=======
 // import { getSalesRoom } from "../functions/Functions";
->>>>>>> 6a7630a8b041f00b3ad112d1fbdbc94c2e744a78
 import axios from "axios";
 // import Booking from '../dashboard/Booking';
 import { GoDeviceDesktop } from 'react-icons/go';

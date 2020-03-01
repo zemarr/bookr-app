@@ -140,6 +140,35 @@ button {
     background-color: #078f68;
     color: white;
 }
+.booking {
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    height: 35px;
+    width: 150px;
+    background-color: #078f68;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    top: 115px;
+    left: 22px;
+    transition: ease-in-out .25s;
+    -webkit-transition: ease-in-out .25s;
+    -moz-transition: ease-in-out .25s;
+    -ms-transition: ease-in-out .25s;
+    -o-transition: ease-in-out .25s;
+}
+
+.booking:hover {
+    font-size: 1.05rem;
+    border-color: #078f68;
+    background-color: white;
+    border: solid;
+    border-width: 2px;
+    color: #078f68;
+}
 
 .contact {
     margin: 1rem 5.5rem;

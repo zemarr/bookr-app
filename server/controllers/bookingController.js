@@ -15,7 +15,7 @@ module.exports.bookRoom = (req, res) => {
     Booking.findOne({ room : name, startDate : time})
     .then((booked) => {
       if(booked) {
-        return 'room and time has already been booked, please choose another'
+        return res.json({message:'room and time has already been booked, please choose another'});
       } else {
         new Booking (room).save()
         .then(() => res.json({message: 'Room Booked'}))
