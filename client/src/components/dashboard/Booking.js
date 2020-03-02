@@ -12,7 +12,8 @@ class Booking extends Component {
         this.state = {
             meetingTitle: '',
             description: '',
-            startDate: new Date()
+            startDate: new Date(),
+            bookingStatus: ''
         };
 
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -42,12 +43,19 @@ class Booking extends Component {
     try {
         const response = await axios.post("http://localhost:5000/api/roombookings", booking);
         const responseData = await response.data;
-        const meetingRoom = responseData;
-        console.log(meetingRoom); 
+        const bookingResponse = responseData;
+        let arr = [];
+        arr.push(bookingResponse)
+        console.log(arr)
+        this.setState({bookingStatus:arr.map(status => status.message)})
+        console.log(bookingResponse); 
     } catch (error) {
         console.error(error);
-    }         
+    }  
+          
     }
+
+    
     
 
     render() {
@@ -109,6 +117,7 @@ class Booking extends Component {
                     name='Book Room'
                     click={this.createMyMeeting}
                 />
+                <div> <h6>{this.state.bookingStatus}</h6></div>
             </div>
         );
     }
