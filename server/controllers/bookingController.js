@@ -15,10 +15,10 @@ module.exports.bookRoom = (req, res) => {
     Booking.findOne({ room : name, startDate : time})
     .then((booked) => {
       if(booked) {
-        return res.json({message:'Room And Time Has Already Been Booked, Please choose Another Room Or Another Time'});
+        return res.json({message:'This Room Already has Meeting Scheduled, Please choose A Different Time or Room'});
       } else {
         new Booking (room).save()
-        .then(() => res.json({message: 'Room Booking Successful'}))
+        .then(() => res.json({message: 'Booked!'}))
         .catch(err => res.status(400).json({error: err, message: "Room booking error"}));
       
       }

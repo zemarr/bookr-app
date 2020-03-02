@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Button from '../buttons/Buttons'
 import axios from 'axios'
+import './dashboard.css'
 // new
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -41,7 +42,7 @@ class Booking extends Component {
     let booking = this.state
     console.log(booking)
     try {
-        const response = await axios.post("http://localhost:5000/api/roombookings", booking);
+        const response = await axios.post("/api/roombookings", booking);
         const responseData = await response.data;
         const bookingResponse = responseData;
         let arr = [];
@@ -117,7 +118,7 @@ class Booking extends Component {
                     name='Book Room'
                     click={this.createMyMeeting}
                 />
-                <div> <h6>{this.state.bookingStatus}</h6></div>
+                <div> <p className="output">{this.state.bookingStatus}</p></div>
             </div>
         );
     }
