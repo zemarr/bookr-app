@@ -42,7 +42,7 @@ class Booking extends Component {
     let booking = this.state
     console.log(booking)
     try {
-        const response = await axios.post("http://localhost:5000/api/roombookings", booking);
+        const response = await axios.post("/api/roombookings", booking);
         const responseData = await response.data;
         const bookingResponse = responseData;
         let arr = [];

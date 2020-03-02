@@ -35,7 +35,7 @@ export const Marketingroom = () => {
 
   const getMarketingRoom = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/allRooms");
+      const response = await axios.get("/allRooms");
       console.log(response);
       const responseData = await response.data;
       console.log(responseData);
@@ -104,7 +104,7 @@ export const Salesroom = () => {
 
   const getSalesRoom = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/allRooms");
+      const response = await axios.get("/allRooms");
       console.log(response);
       const responseData = await response.data;
       console.log(responseData);
@@ -171,7 +171,7 @@ export const Boardroom = () => {
 
   const getBoardRoom = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/allRooms");
+      const response = await axios.get("/allRooms");
       console.log(response);
       const responseData = await response.data;
       console.log(responseData);
@@ -239,7 +239,7 @@ export const Techroom = () => {
 
   const getTechRoom = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/allRooms");
+      const response = await axios.get("/allRooms");
       console.log(response);
       const responseData = await response.data;
       console.log(responseData);
