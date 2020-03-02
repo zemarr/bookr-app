@@ -42,7 +42,7 @@ class Booking extends Component {
     let booking = this.state
     console.log(booking)
     try {
-        const response = await axios.post("/api/roombookings", booking);
+        const response = await axios.post("http://localhost:5000/api/roombookings", booking);
         const responseData = await response.data;
         const bookingResponse = responseData;
         let arr = [];
@@ -89,7 +89,9 @@ class Booking extends Component {
                         <label>Select meeting Room <br />
                             <select value={this.state.room}
                                 onChange={this.handleInputChange}
-                                name='room' className='book-input'>
+                                name='room' className='book-input'
+                                required
+                                >
                                 <option value="">  ---select room---  </option>
                                 <option value="board room">Board Room</option>
                                 <option value="marketing room">Marketing Room</option>
@@ -107,6 +109,7 @@ class Booking extends Component {
                                 timeIntervals={30}
                                 timeCaption="time"
                                 dateFormat="MMMM d, yyyy h:mm"
+                                required
                             />
                         </label>
                     </div>
